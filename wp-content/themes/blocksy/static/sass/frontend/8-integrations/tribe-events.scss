@@ -1,0 +1,35 @@
+:root {
+	--tec-color-accent-primary: var(--paletteColor1);
+}
+
+#main {
+
+	.tribe-common-l-container {
+		max-width: initial;
+	}
+
+	#tribe-events,
+	.tribe-events-l-container {
+		padding: 0;
+	}
+}
+
+.single-tribe_events {
+
+	.hero-section[data-type='type-1'] header.entry-header {
+		display: initial;
+	}
+}
+
+.tribe-common .tribe-common-c-btn, 
+.tribe-common a.tribe-common-c-btn, 
+.tribe-events .tribe-common-c-btn.tribe-events-c-search__button {
+	color: var(--buttonTextInitialColor);
+	background-color: var(--buttonInitialColor);
+
+	&:hover,
+	&:focus {
+		color: var(--buttonTextHoverColor);
+		background-color: var(--buttonHoverColor);			
+	}
+}

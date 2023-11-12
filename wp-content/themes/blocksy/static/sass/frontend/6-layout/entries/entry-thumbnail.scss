@@ -1,0 +1,43 @@
+.entry-card {
+
+	.ct-image-container {
+		border-radius: var(--imageBorderRadius, var(--borderRadius, 0px));
+
+		img {
+			height: 100%;
+		}
+	}
+}
+
+
+// boundless image
+.entry-card .boundless-image {
+	width: calc(100% + var(--card-inner-spacing, 30px) * 2);
+	margin-left: calc(var(--card-inner-spacing, 30px) * -1);
+	margin-right: calc(var(--card-inner-spacing, 30px) * -1);
+
+	&:first-child {
+		border-bottom-left-radius: 0;
+		border-bottom-right-radius: 0;
+		margin-top: calc(var(--card-inner-spacing, 30px) * -1);
+	}
+
+	&:last-child {
+		border-top-left-radius: 0;
+		border-top-right-radius: 0;
+		margin-bottom: calc(var(--card-inner-spacing, 30px) * -1);
+	}
+
+	&:not(:first-child):not(:last-child) {
+		border-radius: 0;
+	}
+}
+
+
+[data-layout="simple"] .entry-card .boundless-image {
+	@include media-breakpoint-up (md) {
+		border-radius: var(--imageBorderRadius, var(--borderRadius, 0px));
+		border-top-right-radius: 0;
+		border-bottom-right-radius:0;
+	}
+}
